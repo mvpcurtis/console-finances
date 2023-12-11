@@ -86,3 +86,40 @@ var finances = [
 	["Jan-2017", 138230],
 	["Feb-2017", 671099],
 ];
+
+console.log("There are " + finances.length + " months total.");
+
+// Create variables to store the sums
+var netProfit = 0;
+var maxNumber = -Infinity;
+var maxArray;
+var minNumber = Infinity;
+var minArray;
+
+// Iterate through each array
+for (var i = 0; i < finances.length; i++) {
+	// Iterate through each element in the array
+	for (var x = 0; x < finances[i].length; x++) {
+		// Check if the element is a number
+		if (typeof finances[i][x] === "number") {
+			// Add the number to the sum
+			netProfit += finances[i][x];
+			// If the number is greater than the current maximum, update the variables
+			if (finances[i][x] > maxNumber) {
+				maxNumber = finances[i][x];
+				maxArray = finances[i];
+			}
+			// If the number is smaller than the current minimum, update the variables
+			if (finances[i][x] < minNumber) {
+				minNumber = finances[i][x];
+				minArray = finances[i];
+			}
+		}
+	}
+}
+
+// Log outputs
+console.log("You're net profit over the past " + finances.length + " months is: " + netProfit);
+console.log("You're average change: " + Math.floor(netProfit / finances.length));
+console.log("Array with the biggest number:", maxArray);
+console.log("Array with the biggest number:", minArray);
