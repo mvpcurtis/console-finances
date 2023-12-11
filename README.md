@@ -6,6 +6,8 @@ This project was created to demonstrate my skills as a JavaScript beginner. This
 
 Along the way I learn't a lot of the basics within JavaScript and how to use things likes loops to iterate through data to target specific items and other pieces of data.
 
+GitHub pages live demo: https://mvpcurtis.github.io/console-finances/
+
 ## Usage
 
 Go to the landing page, right click and click on 'inspect elements'. Once the inspector pops up, click on the 'console' tab and once you're in there, you can see the console-finance project.
